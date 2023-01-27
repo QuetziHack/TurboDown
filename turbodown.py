@@ -1,7 +1,6 @@
 import youtube_dl
 
 class Video:
-<<<<<<< HEAD
     def __init__(self,url) -> None: 
         self.url = url
         
@@ -31,24 +30,6 @@ class Video:
     def descargar(self):
         with youtube_dl.YoutubeDL(self.options) as ydl:
             ydl.download([self.url])
-=======
-	def __main__(self,url):
-		self.url = url
-		self.options = {
-			'format':'bestaudio/best',
-		}
-
-	def genFilename(self,codec):
-		self.info = youtube_dl.YoutubeDL().extract_info(self.url,download=False)
-		self.filename = f"{self.info['title']}.{codec}"
-		self.options['outtmpl']=filename
-
-	
-
-	def downloadmp3(self):
-		
-
->>>>>>> 562ea09453d43a67e7e042dcc41145e781bd5e78
 
 def download_ytvid_as_mp3():
     video_url = input("enter url of youtube video:")
